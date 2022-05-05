@@ -1,6 +1,6 @@
 {
   "name": "paywithoutkyc-node-sdk",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "PayWithoutKYC API wrapper for Node.js",
   "main": ".build/src/index.js",
   "keywords": [
@@ -15,7 +15,7 @@
   "scripts": {
     "prebuild": "rm -rf .build",
     "build": "tsc",
-    "prepublish": "build",
+    "prepublishOnly": "yarn build",
     "test": "ts-node-dev -r dotenv/config example/index.ts"
   },
   "license": "MIT",
