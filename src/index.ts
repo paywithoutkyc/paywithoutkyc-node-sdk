@@ -35,7 +35,7 @@ export class PayWithoutKYC {
           response: { errors, status }
         } = err as ClientError;
 
-        if (status === 200) {
+        if ([200, 400].includes(status)) {
           throw new Error(errors.map(({ message }) => message).join("\n"));
         } else {
           throw new Error("Internal Server Error!");
