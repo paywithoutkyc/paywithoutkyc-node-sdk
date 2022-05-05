@@ -16,7 +16,6 @@
     "prebuild": "rm -rf .build",
     "build": "tsc",
     "prepublish": "build",
-    "publish": "npm publish",
     "test": "ts-node-dev -r dotenv/config example/index.ts"
   },
   "license": "MIT",
