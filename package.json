@@ -1,0 +1,41 @@
+{
+  "name": "paywithoutkyc-node-sdk",
+  "version": "1.0.1",
+  "description": "PayWithoutKYC API wrapper for Node.js",
+  "main": ".build/src/index.js",
+  "keywords": [
+    "PayWithoutKYC",
+    "paywithoutkyc",
+    "pwc",
+    "cryptopay"
+  ],
+  "files": [
+    ".build/src"
+  ],
+  "scripts": {
+    "prebuild": "rm -rf .build",
+    "build": "tsc",
+    "prepublish": "build",
+    "test": "ts-node-dev -r dotenv/config example/index.ts"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/paywithoutkyc/paywithoutkyc-node-sdk/issues",
+    "email": "github@paywithoutkyc.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/paywithoutkyc/paywithoutkyc-node-sdk"
+  },
+  "packageManager": "yarn@3.2.0",
+  "dependencies": {
+    "graphql": "^16.4.0",
+    "graphql-request": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.31",
+    "dotenv": "^16.0.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.6.4"
+  }
+}
