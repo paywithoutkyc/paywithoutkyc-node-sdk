@@ -46,6 +46,7 @@ export enum TransactionStatus {
 export interface TransactionInput {
   callbackUrl: string;
   cancelUrl?: Nullable<string>;
+  hashToken?: Nullable<string>;
   network: Network;
   orderId: string;
   payCurrency: Coin;
