@@ -70,5 +70,24 @@ export interface TransactionCreate {
   to: string;
 }
 
+export interface Transaction {
+  createdAt: DateTime;
+  getMerchant: Merchant;
+  id: number;
+  network?: Nullable<Network>;
+  orderId: string;
+  payAmount: PositiveFloat;
+  payCurrency?: Nullable<Coin>;
+  priceAmount?: Nullable<PositiveFloat>;
+  priceCurrency?: Nullable<CurrencyChar>;
+  randomUUID: string;
+  standard?: Nullable<Standard>;
+  status: TransactionStatus;
+  to: string;
+  transactionId?: Nullable<string>;
+  updatedAt: DateTime;
+}
+
+export type DateTime = any;
 export type PositiveFloat = number;
 export type Nullable<T> = T | null;
