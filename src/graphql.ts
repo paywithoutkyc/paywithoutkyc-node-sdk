@@ -1,4 +1,9 @@
 export enum Coin {
+  BTC = "BTC",
+  DOT = "DOT",
+  ETH = "ETH",
+  FTM = "FTM",
+  MATIC = "MATIC",
   TRX = "TRX",
   TUSD = "TUSD",
   USDC = "USDC",
@@ -21,6 +26,11 @@ export enum CurrencyChar {
 }
 
 export enum Network {
+  BITCOIN = "BITCOIN",
+  ETHEREUM = "ETHEREUM",
+  FANTOM = "FANTOM",
+  POLKADOT = "POLKADOT",
+  POLYGON = "POLYGON",
   TRON = "TRON"
 }
 
