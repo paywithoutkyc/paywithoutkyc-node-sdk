@@ -55,6 +55,7 @@ export enum TransactionStatus {
   INVALID = "INVALID",
   NEW = "NEW",
   PAID = "PAID",
+  PENDING = "PENDING",
   REFUNED = "REFUNED"
 }
 
