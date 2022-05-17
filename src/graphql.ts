@@ -49,14 +49,14 @@ export enum Standard {
 }
 
 export enum TransactionStatus {
-  CANCALED = "CANCALED",
-  CONFIRMING = "CONFIRMING",
-  EXPIRED = "EXPIRED",
-  INVALID = "INVALID",
   NEW = "NEW",
-  PAID = "PAID",
   PENDING = "PENDING",
-  REFUNED = "REFUNED"
+  CONFIRMING = "CONFIRMING",
+  PAID = "PAID",
+  INVALID = "INVALID",
+  EXPIRED = "EXPIRED",
+  CANCELLED = "CANCELLED",
+  REFUNDED = "REFUNDED"
 }
 
 export interface TransactionInput {
