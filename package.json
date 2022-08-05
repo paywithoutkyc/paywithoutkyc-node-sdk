@@ -1,6 +1,6 @@
 {
   "name": "paywithoutkyc-node-sdk",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "PayWithoutKYC API wrapper for Node.js",
   "main": ".build/src/index.js",
   "keywords": [
