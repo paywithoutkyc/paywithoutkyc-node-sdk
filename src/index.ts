@@ -8,17 +8,20 @@ import {
 } from "./types";
 import { CREATE_TRANSACTION, GET_TRANSACTION } from "./queries";
 
+type Props = {
+  publicKey: string;
+  secretKey: string;
+};
+
+type Options = {
+  endpoint?: string;
+};
+
 export class PayWithoutKYC {
   publicKey: string;
   secretKey: string;
 
-  constructor({
-    publicKey,
-    secretKey
-  }: {
-    publicKey: string;
-    secretKey: string;
-  }) {
+  constructor({ publicKey, secretKey }: Props, { endpoint }: Options = {}) {
     if (!publicKey) {
       throw new Error("Public key not initialized!");
     } else if (!secretKey) {
@@ -27,7 +30,9 @@ export class PayWithoutKYC {
 
     this.publicKey = publicKey;
     this.secretKey = secretKey;
-    this.graphQLClient = new GraphQLClient(`https://paywithoutkyc.com/graphql`);
+    this.graphQLClient = new GraphQLClient(
+      endpoint || "https://pay.paywithoutkyc.com/graphql"
+    );
   }
 
   graphQLClient: GraphQLClient;
