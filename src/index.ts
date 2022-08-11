@@ -78,7 +78,7 @@ export class PayWithoutKYC {
 
       return data?.createTransaction;
     } catch (err) {
-      return this.formatError(err);
+      throw this.formatError(err);
     }
   }
 
@@ -95,7 +95,7 @@ export class PayWithoutKYC {
 
       return data?.getTransaction;
     } catch (err) {
-      return this.formatError(err);
+      throw this.formatError(err);
     }
   }
 
